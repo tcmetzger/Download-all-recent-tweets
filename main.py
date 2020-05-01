@@ -69,9 +69,9 @@ def parse_tweet(tweet):
         'source': tweet['source'],
         'retweets': tweet['retweet_count'],
         'favorites': tweet['favorite_count'],
-        'geo': tweet['geo'],
-        'coordinates': tweet['coordinates'],
-        'place': tweet['place'],
+        'geo': str(tweet['geo']),
+        'coordinates': str(tweet['coordinates']),
+        'place': str(tweet['place']),
         'reply_to': tweet['in_reply_to_status_id'],
         'deeplink': f'https://twitter.com/{tweet["user"]["screen_name"]}/status/{tweet["id_str"]}'
         }
